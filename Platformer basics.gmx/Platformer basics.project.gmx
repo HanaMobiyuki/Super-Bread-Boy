@@ -6,17 +6,32 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_player_b</sprite>
+    <sprite>sprites\spr_powerup</sprite>
+    <sprite>sprites\spr_save</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_death.gml</script>
+  </scripts>
   <objects name="objects">
+    <object>objects\obj_portal</object>
+    <object>objects\obj_checkpoint</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_enemy_nofall</object>
+    <object>objects\obj_powerup</object>
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_initialize</room>
     <room>rooms\rm_0</room>
+    <room>rooms\rm_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
