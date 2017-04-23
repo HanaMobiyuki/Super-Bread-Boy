@@ -13,6 +13,7 @@
     <sprite>sprites\spr_player_b</sprite>
     <sprite>sprites\spr_powerup</sprite>
     <sprite>sprites\spr_save</sprite>
+    <sprite>sprites\spr_platform</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +21,7 @@
     <script>scripts\scr_death.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_platform</object>
     <object>objects\obj_portal</object>
     <object>objects\obj_checkpoint</object>
     <object>objects\obj_enemy</object>
