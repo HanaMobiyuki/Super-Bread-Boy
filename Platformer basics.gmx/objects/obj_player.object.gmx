@@ -27,17 +27,19 @@
             <kind>1</kind>
             <string>///variables
 grav = 0.2;
+wallvsp = 2;
 hsp = 0;
 vsp = 0;
 movespeed = 4;
 jumps = 0;
 
+move_lock = false;
+grounded = false;
+
 jumpsmax = 2;
 
 jumpspeed_normal = 7;
 jumpspeed_powerup = 10;
-
-wjsp = 12;
 
 jumpspeed = jumpspeed_normal;
 
@@ -102,10 +104,27 @@ key_jump = keyboard_check_pressed(vk_space);
 key_down = keyboard_check(vk_down);
 
 //React to inputs
-move = key_left + key_right;
+
+if move_lock = false
+{
+    move = key_left + key_right
+}
+
+//Check Floor
+if place_meeting(x, y + 1, obj_wall)
+{
+    vsp = key_jump * -jumpspeed;
+    grounded = true
+}
+else
+{
+    grounded = false
+}
+
 hsp = move * movespeed;
 if (vsp &lt; 10) vsp += grav;
 
+//If ground touched, jumps set to max
 if(place_meeting(x,y+1,obj_wall))
 {
     jumps = jumpsmax;
@@ -118,13 +137,34 @@ if (key_jump) &amp;&amp; (jumps &gt; 0)
     vsp = -jumpspeed;
 }
 
-//Walljump without push
-if (key_jump) &amp;&amp; (place_meeting(x+1,y,obj_wall) || place_meeting(x-1,y,obj_wall))
+//Slow sliding on walls
+if place_meeting(x + 1, y, obj_wall) and grounded = false and vsp &gt; 1
 {
-    vsp = -jumpspeed;
-    hsp = wjsp * movespeed;
+    vsp = wallvsp;
 }
 
+if place_meeting(x - 1, y, obj_wall) and grounded = false and vsp &gt; 1
+{
+    vsp = wallvsp;
+}
+
+//Walljump with push
+//If wall at left, so jump at right
+if (key_jump) and place_meeting(x + 1, y, obj_wall) and grounded = false
+{
+    vsp = -jumpspeed;
+    move = -1
+    move_lock = true
+    alarm[0] = 30 //Value that determinate the time player will be pushed in the other direction of the walljump
+}
+//If wall at right, jump at left
+if (key_jump) and place_meeting(x - 1, y, obj_wall) and grounded = false
+{
+    vsp = -jumpspeed;
+    move = 1
+    move_lock = true
+    alarm[0] = 30 // Same as above
+}
 
 
 //Horizontal Collision

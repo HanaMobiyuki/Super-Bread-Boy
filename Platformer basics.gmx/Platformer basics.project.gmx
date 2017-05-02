@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_portal</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_player</sprite>
@@ -13,7 +14,6 @@
     <sprite>sprites\spr_player_b</sprite>
     <sprite>sprites\spr_powerup</sprite>
     <sprite>sprites\spr_save</sprite>
-    <sprite>sprites\spr_platform</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
