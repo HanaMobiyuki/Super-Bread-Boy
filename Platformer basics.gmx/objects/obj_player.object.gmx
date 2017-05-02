@@ -37,6 +37,8 @@ jumpsmax = 2;
 jumpspeed_normal = 7;
 jumpspeed_powerup = 10;
 
+wjsp = 12;
+
 jumpspeed = jumpspeed_normal;
 
 if(global.checkpointR == room)
@@ -104,20 +106,23 @@ move = key_left + key_right;
 hsp = move * movespeed;
 if (vsp &lt; 10) vsp += grav;
 
-move = key_left + key_right;
+if(place_meeting(x,y+1,obj_wall))
+{
+    jumps = jumpsmax;
+}
 
 //Retire a jump count after a jump to the jumps variable
 if (key_jump) &amp;&amp; (jumps &gt; 0)
 {
     jumps -= 1;
     vsp = -jumpspeed;
-
 }
 
 //Walljump without push
 if (key_jump) &amp;&amp; (place_meeting(x+1,y,obj_wall) || place_meeting(x-1,y,obj_wall))
 {
     vsp = -jumpspeed;
+    hsp = wjsp * movespeed;
 }
 
 
