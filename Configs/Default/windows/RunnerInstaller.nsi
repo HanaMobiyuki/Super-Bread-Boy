@@ -57,6 +57,11 @@
 !define APP_NAME        "${PRODUCT_NAME}"
 !define SHORT_NAME        "${PRODUCT_NAME}"
 
+!ifndef EXE_NAME
+!define EXE_NAME "${PRODUCT_NAME}"
+!endif
+
+
 ;;USAGE:
 !define MIN_FRA_MAJOR "2"
 !define MIN_FRA_MINOR "0"
@@ -113,7 +118,7 @@ VIAddVersionKey /LANG=1033 "FileDescription" "${FILE_DESC}"
     # These indented statements modify settings for MUI_PAGE_FINISH
     !define MUI_FINISHPAGE_NOAUTOCLOSE
     !define MUI_FINISHPAGE_RUN_TEXT "Start ${PRODUCT_NAME}"
-    !define MUI_FINISHPAGE_RUN "$INSTDIR\${PRODUCT_NAME}.exe"
+    !define MUI_FINISHPAGE_RUN "$INSTDIR\${EXE_NAME}.exe"
 !insertmacro MUI_PAGE_FINISH
 
 Var DirectXSetupError
@@ -149,7 +154,7 @@ Section "Start Menu Shortcuts"
 
   CreateDirectory "$SMPROGRAMS\${APP_NAME}"
   CreateShortCut "$SMPROGRAMS\${APP_NAME}\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
-  CreateShortCut "$SMPROGRAMS\${APP_NAME}\${APP_NAME}.lnk" "$INSTDIR\${PRODUCT_NAME}.exe" "" "$INSTDIR\${PRODUCT_NAME}.exe" 
+  CreateShortCut "$SMPROGRAMS\${APP_NAME}\${APP_NAME}.lnk" "$INSTDIR\${EXE_NAME}.exe" "" "$INSTDIR\${EXE_NAME}.exe" 
   CreateShortCut "$SMPROGRAMS\${APP_NAME}\${APP_NAME} License.lnk" "notepad.exe" "$INSTDIR\License.txt"
   
 SectionEnd
@@ -158,7 +163,7 @@ SectionEnd
 ; Optional section (can be enabled by the user)
 Section /o "Desktop shortcut"
 
-  CreateShortCut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${PRODUCT_NAME}.exe" ""
+  CreateShortCut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${EXE_NAME}.exe" ""
   
 SectionEnd
 
