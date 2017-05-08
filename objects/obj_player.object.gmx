@@ -104,12 +104,24 @@ key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(vk_space);
 key_down = keyboard_check(vk_down);
+key_restart = keyboard_check_pressed(ord("R"))
+key_quit = keyboard_check_pressed(vk_escape)
 
 //React to inputs
 
 if move_lock = false
 {
     move = key_left + key_right
+}
+
+if key_restart
+{
+    room_restart();
+}
+
+if key_quit
+{
+    game_end()
 }
 
 //Check Floor
