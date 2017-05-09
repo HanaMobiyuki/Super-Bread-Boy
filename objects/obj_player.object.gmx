@@ -43,8 +43,6 @@ jumpspeed_powerup = 10;
 
 jumpspeed = jumpspeed_normal;
 
-sound_global_volume(10);
-
 if(global.checkpointR == room)
 {
     x = global.checkpointx;
@@ -76,7 +74,7 @@ key_down = 0;
             <kind>1</kind>
             <string>jumpspeed = jumpspeed_normal;
 sprite_index = spr_player;
-move_lock = false
+move_lock = false;
 </string>
           </argument>
         </arguments>
@@ -106,6 +104,7 @@ key_jump = keyboard_check_pressed(vk_space);
 key_down = keyboard_check(vk_down);
 key_restart = keyboard_check_pressed(ord("R"))
 key_quit = keyboard_check_pressed(vk_escape)
+key_ah = keyboard_check_pressed(ord("A"))
 
 //React to inputs
 
@@ -119,9 +118,14 @@ if key_restart
     room_restart();
 }
 
+if key_ah
+{
+    audio_play_sound(snd_ah, 100, false)
+}
+
 if key_quit
 {
-    game_end()
+    game_end();
 }
 
 //Check Floor

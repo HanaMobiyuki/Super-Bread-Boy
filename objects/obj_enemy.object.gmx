@@ -93,6 +93,7 @@ if (place_meeting(x,y,obj_player))
 {
     if (obj_player.y &lt; y-16)
     {
+        audio_play_sound(snd_ah, 1, false);
         with (obj_player) vsp = -jumpspeed;
         instance_destroy();
     }
