@@ -27,11 +27,15 @@
             <kind>1</kind>
             <string>///variables
 grav = 0.2;
-wallvsp = 2;
-hsp = 0;
-vsp = 0;
+
+hsp = 0; //horizontal speed
+
+vsp = 0; //vertical speed
+
+wallvsp = 2; //vertical speed when a walljump occured
+
 movespeed = 4;
-jumps = 0;
+jumps_count = 0;
 
 move_lock = false;
 grounded = false;
@@ -107,7 +111,6 @@ key_quit = keyboard_check_pressed(vk_escape)
 key_ah = keyboard_check_pressed(ord("A"))
 
 //React to inputs
-
 if move_lock = false
 {
     move = key_left + key_right
@@ -128,7 +131,30 @@ if key_quit
     game_end();
 }
 
-//Check Floor
+///Collisions
+//Horizontal 
+if (place_meeting(x+hsp,y,obj_wall))
+{
+    while(!place_meeting(x+sign(hsp),y,obj_wall))
+    {
+        x += sign(hsp);
+    }
+    hsp = 0;
+}
+x += hsp;
+
+//Vertical 
+if (place_meeting(x,y+vsp,obj_wall))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_wall))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
+
+//Check floor
 if place_meeting(x, y + 1, obj_wall)
 {
     vsp = key_jump * -jumpspeed;
@@ -155,19 +181,21 @@ if (key_jump) &amp;&amp; (jumps &gt; 0)
     vsp = -jumpspeed;
 }
 
-//Slow sliding on walls
+///Slow sliding on walls
+//Right
 if place_meeting(x + 1, y, obj_wall) and grounded = false and vsp &gt; 1
 {
     vsp = wallvsp;
 }
 
+//Left
 if place_meeting(x - 1, y, obj_wall) and grounded = false and vsp &gt; 1
 {
     vsp = wallvsp;
 }
 
-//Walljump with push
-//If wall at left, so jump at right
+///Walljump with push
+//If wall at left, jump at right
 if (key_jump) and place_meeting(x + 1, y, obj_wall) and grounded = false
 {
     vsp = -jumpspeed;
@@ -175,6 +203,7 @@ if (key_jump) and place_meeting(x + 1, y, obj_wall) and grounded = false
     move_lock = true
     alarm[0] = 30 //Value that determinate the time player will be pushed in the other direction of the walljump
 }
+
 //If wall at right, jump at left
 if (key_jump) and place_meeting(x - 1, y, obj_wall) and grounded = false
 {
@@ -183,29 +212,6 @@ if (key_jump) and place_meeting(x - 1, y, obj_wall) and grounded = false
     move_lock = true
     alarm[0] = 30 // Same as above
 }
-
-
-//Horizontal Collision
-if (place_meeting(x+hsp,y,obj_wall))
-{
-    while(!place_meeting(x+sign(hsp),y,obj_wall))
-    {
-        x += sign(hsp);
-    }
-    hsp = 0;
-}
-x += hsp;
-
-//Vertical Collision
-if (place_meeting(x,y+vsp,obj_wall))
-{
-    while(!place_meeting(x,y+sign(vsp),obj_wall))
-    {
-        y += sign(vsp);
-    }
-    vsp = 0;
-}
-y += vsp;
 </string>
           </argument>
         </arguments>

@@ -4,16 +4,16 @@
     <option_aborterrors>False</option_aborterrors>
     <option_android_GPU_device>0</option_android_GPU_device>
     <option_android_adcolony_ads>0</option_android_adcolony_ads>
-    <option_android_adcolony_enable_V4VC>false</option_android_adcolony_enable_V4VC>
-    <option_android_advertising_enable>false</option_android_advertising_enable>
+    <option_android_adcolony_enable_V4VC>0</option_android_adcolony_enable_V4VC>
+    <option_android_advertising_enable>0</option_android_advertising_enable>
     <option_android_advertising_key></option_android_advertising_key>
     <option_android_advertising_type>MoPub</option_android_advertising_type>
     <option_android_amazon_ads>0</option_android_amazon_ads>
     <option_android_amazon_game_circle>0</option_android_amazon_game_circle>
-    <option_android_amazon_gc_achievements>true</option_android_amazon_gc_achievements>
-    <option_android_amazon_gc_leaderboards>true</option_android_amazon_gc_leaderboards>
-    <option_android_amazon_gc_whispersync>false</option_android_amazon_gc_whispersync>
-    <option_android_amazon_iap>false</option_android_amazon_iap>
+    <option_android_amazon_gc_achievements>-1</option_android_amazon_gc_achievements>
+    <option_android_amazon_gc_leaderboards>-1</option_android_amazon_gc_leaderboards>
+    <option_android_amazon_gc_whispersync>0</option_android_amazon_gc_whispersync>
+    <option_android_amazon_iap>0</option_android_amazon_iap>
     <option_android_apk_expansion>0</option_android_apk_expansion>
     <option_android_arch_armv5>True</option_android_arch_armv5>
     <option_android_arch_armv7>True</option_android_arch_armv7>
@@ -66,9 +66,9 @@
     <option_android_package_domain>com</option_android_package_domain>
     <option_android_package_product>Super_Bread_Boy</option_android_package_product>
     <option_android_permission_flags>8</option_android_permission_flags>
-    <option_android_pocketchange_enable>false</option_android_pocketchange_enable>
+    <option_android_pocketchange_enable>0</option_android_pocketchange_enable>
     <option_android_pocketchange_id></option_android_pocketchange_id>
-    <option_android_pocketchange_test_enable>false</option_android_pocketchange_test_enable>
+    <option_android_pocketchange_test_enable>0</option_android_pocketchange_test_enable>
     <option_android_portrait_splash_png>Configs\Default\android\portrait_splash.png</option_android_portrait_splash_png>
     <option_android_push_enable>0</option_android_push_enable>
     <option_android_push_id></option_android_push_id>
@@ -80,7 +80,7 @@
     <option_android_support_lib_version>23.1.1</option_android_support_lib_version>
     <option_android_target_sdk_version>23</option_android_target_sdk_version>
     <option_android_texture_page>1024</option_android_texture_page>
-    <option_android_use_test_ads>false</option_android_use_test_ads>
+    <option_android_use_test_ads>0</option_android_use_test_ads>
     <option_androidfire_GPU_device>0</option_androidfire_GPU_device>
     <option_androidfire_adcolony_enable_V4VC>false</option_androidfire_adcolony_enable_V4VC>
     <option_androidfire_advertising_enable>false</option_androidfire_advertising_enable>
@@ -225,7 +225,7 @@
     <option_ecma>0</option_ecma>
     <option_facebook_app_display_name></option_facebook_app_display_name>
     <option_facebook_appid></option_facebook_appid>
-    <option_facebook_enable>false</option_facebook_enable>
+    <option_facebook_enable>0</option_facebook_enable>
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
@@ -269,13 +269,13 @@
     <option_html5_usebuiltinparticles>True</option_html5_usebuiltinparticles>
     <option_html5_usesplash>False</option_html5_usesplash>
     <option_icon>nil</option_icon>
-    <option_in_app_purchase_enable>false</option_in_app_purchase_enable>
+    <option_in_app_purchase_enable>0</option_in_app_purchase_enable>
     <option_in_app_purchase_sandbox_mode>0</option_in_app_purchase_sandbox_mode>
     <option_in_app_purchase_server_url></option_in_app_purchase_server_url>
     <option_information></option_information>
     <option_interpolate>True</option_interpolate>
-    <option_ios_adcolony_enable_V4VC>false</option_ios_adcolony_enable_V4VC>
-    <option_ios_advertising_enable>false</option_ios_advertising_enable>
+    <option_ios_adcolony_enable_V4VC>0</option_ios_adcolony_enable_V4VC>
+    <option_ios_advertising_enable>0</option_ios_advertising_enable>
     <option_ios_advertising_key></option_ios_advertising_key>
     <option_ios_advertising_type>iAds</option_ios_advertising_type>
     <option_ios_app_id></option_ios_app_id>
@@ -321,7 +321,7 @@
     <option_ios_orient_landscape_right>-1</option_ios_orient_landscape_right>
     <option_ios_orient_portrait>-1</option_ios_orient_portrait>
     <option_ios_orient_portrait_upside_down>-1</option_ios_orient_portrait_upside_down>
-    <option_ios_provisioning></option_ios_provisioning>
+    <option_ios_provisioning>&lt; Press refresh to fetch provisioning list from Mac&gt;</option_ios_provisioning>
     <option_ios_push_enable>0</option_ios_push_enable>
     <option_ios_scale>-1</option_ios_scale>
     <option_ios_set_device_id></option_ios_set_device_id>
@@ -329,7 +329,7 @@
     <option_ios_splash_time>0</option_ios_splash_time>
     <option_ios_team_id></option_ios_team_id>
     <option_ios_texture_page>1024</option_ios_texture_page>
-    <option_ios_use_test_ads>false</option_ios_use_test_ads>
+    <option_ios_use_test_ads>0</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
     <option_linux_display_name>Super Bread Boy</option_linux_display_name>
     <option_linux_enable_steam>0</option_linux_enable_steam>
@@ -480,8 +480,8 @@
     <option_use_fast_collision>False</option_use_fast_collision>
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
-    <option_version>V0.1-alpha</option_version>
-    <option_version_build>0</option_version_build>
+    <option_version>V0.1-alpha7</option_version>
+    <option_version_build>7</option_version_build>
     <option_version_company></option_version_company>
     <option_version_copyright></option_version_copyright>
     <option_version_description></option_version_description>
@@ -557,7 +557,7 @@
     <option_winUAP_wide_logo>Configs\Default\WindowsUAP\logos\WideLogo.scale-100.png</option_winUAP_wide_logo>
     <option_windowcolor>clBlack</option_windowcolor>
     <option_windows_alternate_sync_method>False</option_windows_alternate_sync_method>
-    <option_windows_build_version>0</option_windows_build_version>
+    <option_windows_build_version>7</option_windows_build_version>
     <option_windows_company_info></option_windows_company_info>
     <option_windows_copyright_info></option_windows_copyright_info>
     <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>
@@ -657,7 +657,7 @@
     <option_xbone_ratings>"&lt;mx:Ratings Category=""game""&gt;","&lt;!-- Insert your title ratings here --&gt;","&lt;!-- See ""Title Ratings for Xbox One"" white paper --&gt;","&lt;!-- from developer.xboxlive.com for details --&gt;",&lt;/mx:Ratings&gt;</option_xbone_ratings>
     <option_xbone_require_audio_recording>False</option_xbone_require_audio_recording>
     <option_xbone_require_game_chat>False</option_xbone_require_game_chat>
-    <option_xbone_require_xbox_live>True</option_xbone_require_xbox_live>
+    <option_xbone_require_xbox_live>0</option_xbone_require_xbox_live>
     <option_xbone_revision_version>0</option_xbone_revision_version>
     <option_xbone_scale>-1</option_xbone_scale>
     <option_xbone_service_config_id></option_xbone_service_config_id>

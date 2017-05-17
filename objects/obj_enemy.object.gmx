@@ -33,7 +33,6 @@ grav = 0.2;
 hsp = 0;
 vsp = 0;
 fearofheights = 0;
-sound_play(snd_ah)
 </string>
           </argument>
         </arguments>
