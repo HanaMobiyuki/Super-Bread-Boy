@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_ah</sound>
-    <sound>sound\snd_ah_remix</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_platform</sprite>
